@@ -13,7 +13,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
     { id: 'sales' as Tab, label: 'Sales Dashboard', icon: ShoppingCart },
     { id: 'ads' as Tab, label: 'Ads Performance', icon: TrendingUp },
     { id: 'logs' as Tab, label: 'Run Logs', icon: FileText },
-    { id: 'about' as Tab, label: 'How It Works', icon: BarChart3 },
+    { id: 'about' as Tab, label: 'How It Works', icon: Info },
   ]
 
   return (
