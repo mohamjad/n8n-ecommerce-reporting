@@ -6,8 +6,7 @@ import AdsDashboard from '../components/AdsDashboard'
 import RunLogs from '../components/RunLogs'
 import About from '../components/About'
 import Sidebar from '../components/Sidebar'
-
-type Tab = 'sales' | 'ads' | 'logs' | 'about'
+import { Tab } from '../types'
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>('sales')
