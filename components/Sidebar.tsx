@@ -1,8 +1,7 @@
 'use client'
 
-import { ShoppingCart, TrendingUp, FileText, BarChart3 } from 'lucide-react'
-
-type Tab = 'sales' | 'ads' | 'logs'
+import { ShoppingCart, TrendingUp, FileText, BarChart3, Info } from 'lucide-react'
+import { Tab } from '../types'
 
 interface SidebarProps {
   activeTab: Tab
