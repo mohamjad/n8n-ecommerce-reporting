@@ -1,0 +1,154 @@
+{
+  "description": "Sample output schema showing structure of normalized metrics",
+  "sample_records": [
+    {
+      "metadata": {
+        "date": "2026-02-01",
+        "marketplace": "US",
+        "account_id": "A123456789",
+        "currency": "USD",
+        "attribution_window": 7,
+        "data_source_version": "v1.0",
+        "report_id": "RPT-AMZ-20260201-001",
+        "run_id": "RUN-20260202-060000",
+        "last_updated": "2026-02-02T06:15:00Z"
+      },
+      "sales_metrics": {
+        "total_orders": 145,
+        "total_revenue": 12450.75,
+        "net_revenue": 12100.25,
+        "units_sold": 198,
+        "avg_order_value": 85.87,
+        "refunds_amount": 350.50,
+        "refund_rate": 2.81,
+        "order_status_shipped": 140,
+        "order_status_pending": 3,
+        "order_status_cancelled": 2,
+        "organic_sales": 8500.00,
+        "promoted_sales": 3950.75,
+        "fulfillment_by_amazon": 120,
+        "fulfillment_by_merchant": 25,
+        "product_sales_top_skus": [
+          {
+            "sku": "PROD-001",
+            "units": 45,
+            "revenue": 2250.00
+          },
+          {
+            "sku": "PROD-002",
+            "units": 32,
+            "revenue": 1920.00
+          }
+        ]
+      },
+      "ads_metrics": {
+        "ad_spend": 850.25,
+        "ad_sales": 3950.75,
+        "ad_orders": 48,
+        "impressions": 125000,
+        "clicks": 1250,
+        "ctr": 1.00,
+        "cpc": 0.68,
+        "acos": 21.52,
+        "tacos": 6.83,
+        "roas": 4.65,
+        "conversion_rate": 3.84,
+        "campaign_type_sp": 650.00,
+        "campaign_type_sb": 150.25,
+        "campaign_type_sd": 50.00,
+        "ad_attribution_window": 7
+      },
+      "computed_metrics": {
+        "acos": 21.52,
+        "tacos": 6.83,
+        "ctr": 1.00,
+        "cpc": 0.68,
+        "roas": 4.65,
+        "conversion_rate": 3.84,
+        "avg_order_value": 85.87,
+        "refund_rate": 2.81
+      }
+    },
+    {
+      "metadata": {
+        "date": "2026-02-01",
+        "marketplace": "WM_US",
+        "account_id": "WM-987654321",
+        "currency": "USD",
+        "attribution_window": 14,
+        "data_source_version": "v2.0",
+        "report_id": "RPT-WM-20260201-001",
+        "run_id": "RUN-20260202-060000",
+        "last_updated": "2026-02-02T06:20:00Z"
+      },
+      "sales_metrics": {
+        "total_orders": 89,
+        "total_revenue": 7120.50,
+        "net_revenue": 7050.00,
+        "units_sold": 134,
+        "avg_order_value": 80.01,
+        "refunds_amount": 70.50,
+        "refund_rate": 0.99,
+        "order_status_shipped": 85,
+        "order_status_pending": 2,
+        "order_status_cancelled": 2,
+        "organic_sales": 5000.00,
+        "promoted_sales": 2120.50,
+        "fulfillment_by_amazon": 0,
+        "fulfillment_by_merchant": 89
+      },
+      "ads_metrics": {
+        "ad_spend": 420.75,
+        "ad_sales": 2120.50,
+        "ad_orders": 28,
+        "impressions": 89000,
+        "clicks": 890,
+        "ctr": 1.00,
+        "cpc": 0.47,
+        "acos": 19.84,
+        "tacos": 5.91,
+        "roas": 5.04,
+        "conversion_rate": 3.15,
+        "campaign_type_sp": 350.00,
+        "campaign_type_sb": 70.75,
+        "campaign_type_sd": 0,
+        "ad_attribution_window": 14
+      },
+      "computed_metrics": {
+        "acos": 19.84,
+        "tacos": 5.91,
+        "ctr": 1.00,
+        "cpc": 0.47,
+        "roas": 5.04,
+        "conversion_rate": 3.15,
+        "avg_order_value": 80.01,
+        "refund_rate": 0.99
+      }
+    }
+  ],
+  "field_mapping": {
+    "amazon_sp_api": {
+      "total_orders": "Total Orders",
+      "total_revenue": "Total Sales",
+      "units_sold": "Units Sold",
+      "refunds_amount": "Refunds"
+    },
+    "amazon_ads_api": {
+      "ad_spend": "cost",
+      "ad_sales": "attributedSales14d",
+      "impressions": "impressions",
+      "clicks": "clicks"
+    },
+    "walmart_seller_api": {
+      "total_orders": "orderCount",
+      "total_revenue": "totalSales",
+      "units_sold": "unitsSold"
+    },
+    "walmart_ads_api": {
+      "ad_spend": "spend",
+      "ad_sales": "sales",
+      "impressions": "impressions",
+      "clicks": "clicks"
+    }
+  }
+}
