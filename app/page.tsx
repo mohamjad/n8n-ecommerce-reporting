@@ -4,9 +4,10 @@ import { useState } from 'react'
 import SalesDashboard from '../components/SalesDashboard'
 import AdsDashboard from '../components/AdsDashboard'
 import RunLogs from '../components/RunLogs'
+import About from '../components/About'
 import Sidebar from '../components/Sidebar'
 
-type Tab = 'sales' | 'ads' | 'logs'
+type Tab = 'sales' | 'ads' | 'logs' | 'about'
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>('sales')
@@ -20,6 +21,7 @@ export default function Home() {
           {activeTab === 'sales' && <SalesDashboard />}
           {activeTab === 'ads' && <AdsDashboard />}
           {activeTab === 'logs' && <RunLogs />}
+          {activeTab === 'about' && <About />}
         </div>
       </main>
     </div>
