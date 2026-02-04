@@ -152,8 +152,8 @@ function KPICard({ title, value, change, icon: Icon, color, subtitle }: {
 
   return (
     <div className="bg-white rounded-lg shadow p-6 relative">
-      <div className={`${colorClasses[color]} p-3 rounded-lg absolute top-4 right-4`}>
-        <Icon className="h-6 w-6 text-white" />
+      <div className={`${colorClasses[color]} p-2 rounded-lg absolute top-4 right-4`}>
+        <Icon className="h-4 w-4 text-white" />
       </div>
       <div>
         <p className="text-sm font-medium text-gray-600">{title}</p>
