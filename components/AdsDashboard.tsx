@@ -195,28 +195,26 @@ function KPICard({ title, value, change, icon: Icon, color, subtitle }: {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow p-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-sm font-medium text-gray-600">{title}</p>
-          <p className="text-2xl font-bold text-gray-900 mt-1">{value}</p>
-          {subtitle && <p className="text-xs text-gray-500 mt-1">{subtitle}</p>}
-          {change !== undefined && (
-            <div className="flex items-center mt-2">
-              {change >= 0 ? (
-                <TrendingUp className="h-4 w-4 text-green-500 mr-1" />
-              ) : (
-                <TrendingDown className="h-4 w-4 text-red-500 mr-1" />
-              )}
-              <span className={`text-sm font-medium ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                {Math.abs(change).toFixed(1)}% vs last week
-              </span>
-            </div>
-          )}
-        </div>
-        <div className={`${colorClasses[color]} p-3 rounded-lg`}>
-          <Icon className="h-6 w-6 text-white" />
-        </div>
+    <div className="bg-white rounded-lg shadow p-6 relative">
+      <div className={`${colorClasses[color]} p-3 rounded-lg absolute top-4 right-4`}>
+        <Icon className="h-6 w-6 text-white" />
+      </div>
+      <div>
+        <p className="text-sm font-medium text-gray-600">{title}</p>
+        <p className="text-2xl font-bold text-gray-900 mt-1">{value}</p>
+        {subtitle && <p className="text-xs text-gray-500 mt-1">{subtitle}</p>}
+        {change !== undefined && (
+          <div className="flex items-center mt-2">
+            {change >= 0 ? (
+              <TrendingUp className="h-4 w-4 text-green-500 mr-1" />
+            ) : (
+              <TrendingDown className="h-4 w-4 text-red-500 mr-1" />
+            )}
+            <span className={`text-sm font-medium ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              {Math.abs(change).toFixed(1)}% vs last week
+            </span>
+          </div>
+        )}
       </div>
     </div>
   )
